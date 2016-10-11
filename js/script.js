@@ -40,10 +40,13 @@ $(document).ready(function() {
 
     activeItem = $("#accordion li:first");
     $(activeItem).addClass('active');
+    $(activeItem).css({'color': 'red'});
 
     $("#accordion li").click(function(){
-        $(activeItem).animate({width: "50px"}, {duration:300, queue:false});
-        $(this).animate({width: "90%"}, {duration:300, queue:false});
+        $(activeItem).animate({width: "5%"}, {duration:300, queue:false});
+        $(activeItem).css({'color': "black"});
+        $(this).animate({width: "85%"}, {duration:300, queue:false});
+        $(this).css({'color': 'red'});
         activeItem = this;
     });
 });
